@@ -39,7 +39,7 @@ function Walletobjects(options) { // eslint-disable-line
   var self = this;
   self._options = options || {};
 
-  self.loyaltyClass = {
+  self.loyaltyObject = {
 
       /**
        * walletobjects.loyaltyObject.get
@@ -60,6 +60,7 @@ function Walletobjects(options) { // eslint-disable-line
             method: 'GET'
           },
           params: params,
+          requiredParams: [],
           pathParams: ['resourceId'],
           context: self
         };
