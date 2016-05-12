@@ -41,31 +41,59 @@ function Walletobjects(options) { // eslint-disable-line
 
   self.loyaltyObject = {
 
-      /**
-       * walletobjects.loyaltyObject.get
-       *
-       * @desc Returns the loyalty object with the given object ID.
-       *
-       * @memberOf! walletobjects(v1)
-       *
-       * @param {object} params Parameters for request
-       * @param {string} params.resourceId The unique identifier for a resource
-       * @param {callback} callback The callback that handles the response.
-       * @return {object} Request object
-       */
-      get: function (params, callback) {
-        var parameters = {
-          options: {
-            url: 'https://www.googleapis.com/walletobjects/v1/loyaltyObject/{resourceId}',
-            method: 'GET'
-          },
-          params: params,
-          requiredParams: [],
-          pathParams: ['resourceId'],
-          context: self
-        };
+    /**
+     * walletobjects.loyaltyObject.get
+     *
+     * @desc Returns the loyalty object with the given object ID.
+     *
+     * @memberOf! walletobjects(v1)
+     *
+     * @param {object} params Parameters for request
+     * @param {string} params.resourceId The unique identifier for a resource
+     * @param {callback} callback The callback that handles the response.
+     * @return {object} Request object
+     */
+    get: function(params, callback) {
+      var parameters = {
+        options: {
+          url: 'https://www.googleapis.com/walletobjects/v1/loyaltyObject/{resourceId}',
+          method: 'GET'
+        },
+        params: params,
+        requiredParams: ['resourceId'],
+        pathParams: ['resourceId'],
+        context: self
+      };
 
-        return createAPIRequest(parameters, callback);
+      return createAPIRequest(parameters, callback);
+    },
+
+    /**
+     * walletobjects.loyaltyObject.patch
+     *
+     * @desc Updates the loyalty object referenced by the given object ID.
+     *
+     * @memberOf! walletobjects(v1)
+     *
+     * @param {object} params Parameters for request
+     * @param {string} params.resourceId The unique identifier for a resource
+     * @param {object} params.resource Request body data
+     * @param {callback} callback The callback that handles the response.
+     * @return {object} Request object
+     */
+    patch: function(params, callback) {
+      var parameters = {
+        options: {
+          url: 'https://www.googleapis.com/walletobjects/v1/loyaltyObject/{resourceId}',
+          method: 'PATCH'
+        },
+        params: params,
+        requiredParams: ['resourceId'],
+        pathParams: ['resourceId'],
+        context: self
+      };
+
+      return createAPIRequest(parameters, callback);
     }
   };
 }
